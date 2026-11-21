@@ -7,7 +7,7 @@ def test_homepage():
     response = client.get("/")
 
     assert response.status_code == 200
-    assert b"version 1" in response.data
+    assert b"version 2" in response.data
 
 
 def test_health():
@@ -23,7 +23,7 @@ def test_info():
     response = client.get("/api/info")
 
     assert response.status_code == 200
-    assert response.get_json()["version"] == "1"
+    assert response.get_json()["version"] == "2"
 
 
 def test_invalid_page():

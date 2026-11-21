@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.get("/")
 def home():
     return """
-    <h1>Welcome to my CI/CD project - version 1</h1>
+    <h1>Welcome to my CI/CD project - version 2</h1>
     <p>My first cloud deployment application.</p>
     """
 
@@ -21,7 +21,7 @@ def health():
 def info():
     return jsonify({
         "application": "CI/CD Cloud Project",
-        "version": "1",
+        "version": "2",
         "framework": "Flask"
     }), 200
 
